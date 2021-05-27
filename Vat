@@ -1,0 +1,5 @@
+def vat(v):
+    total = v + (v*7/100)
+    return total
+v = int(input())
+print(vat(v))
