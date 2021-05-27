@@ -19,5 +19,5 @@ def menuSelect():
     return vatCalculator(ass + bss)
 def vatCalculator(p):
     total = p + (p*7/100)
-    return total
+    return print("ราคาสินค้ารวมภาษี = %.2f" %total)
 print(login())
