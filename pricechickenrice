@@ -1,0 +1,18 @@
+systemmenu = {"ข้าวหมกไก่":45,"ข้าวมันไก่":40,"ข้าวมันไก่ผสม":50,"ข้าวมันไก่พิเศษ":45}
+menulist = []
+price = 0
+def showbill():
+    print("----My Food----")
+    for number in range(len(menulist)):
+        print(menulist[number][0],menulist[number][1])
+
+while True:
+    menuName = input("ชื่ออาหาร:")
+    if menuName.lower() == "exit":
+        break
+    else:
+        menulist.append([menuName,systemmenu[menuName]])
+        price = price + systemmenu[menuName]
+print(menulist)
+showbill()
+print("ราคารวม =",price)
