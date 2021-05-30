@@ -1,0 +1,18 @@
+menulist = []
+price = 0
+def showbill():
+    print("----My Food----")
+    for number in range(len(menulist)):
+        print(menulist[number][0],menulist[number][1])
+
+while True:
+    menuName = input("ชื่ออาหาร:")
+    if menuName.lower() == "exit":
+        break
+    else:
+        menuprice = int(input('ราคา:'))
+        menulist.append([menuName,menuprice])
+        price = price + menuprice
+print(menulist)
+showbill()
+print("ราคาอาหารทั้งหมด = ",price)
