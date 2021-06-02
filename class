@@ -1,0 +1,14 @@
+class Customer:
+    name = ""
+    lastname = ""
+    age = 0
+    def addCart(self):
+        print("Added to Cart", self.name, self.lastname,"'s cart")
+customer1 = Customer()
+customer1.name = "Chatnarong"
+customer1.lastname = "Wonghaiboon"
+customer1.addCart()
+customer2 = Customer()
+customer2.name = "Chot"
+customer2.lastname = "Chai"
+customer2.addCart()
