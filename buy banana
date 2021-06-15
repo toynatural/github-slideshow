@@ -1,0 +1,25 @@
+def login():
+    username = input("Username:")
+    password = input("Password:")
+    if username == "admin" and password == "1234":
+        return showMenu()
+	else:
+		login()
+def showMenu():
+    print("Wellcome")
+    print("apple 10 bath \nBanana 20 bath")
+    return menuSelect()
+def menuSelect():
+    apple = int(input("How much apple do you want: "))
+    banana = int(input("How much banana do you want: "))
+    ass = 10 * apple
+    bss = 20 * banana
+    if apple > 0:
+        print("Your cost of apple is 10 x %d =" %apple, ass)
+    if banana > 0:
+        print("Your cost of banana is 20 x %d =" %banana, bss)
+    return vatCalculator(ass + bss)
+def vatCalculator(p):
+    total = p + (p*7/100)
+    return print("ราคาสินค้ารวมภาษี = %.2f" %total)
+print(login())
